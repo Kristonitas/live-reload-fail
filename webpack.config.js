@@ -1,8 +1,5 @@
 "use strict";
 
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 module.exports = (env = {}) => {
   const config = {
     entry: ["./src/index.js"],
@@ -16,20 +13,13 @@ module.exports = (env = {}) => {
       extensions: [".js"],
       modules: ["node_modules", "src"]
     },
-    module: {
-      rules: []
-    },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src/index.html")
-      })
-    ]
   };
 
   config.devServer = {
     port: 7777,
     open: true,
-    liveReload: true
+    liveReload: true, // true is the default value
+    writeToDisk: true
   };
 
   return config;

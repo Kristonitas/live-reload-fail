@@ -1,6 +1,6 @@
 # Live reload fail
 
-This is a minimum project used to test `webpack-dev-server` and `html-webpack-plugin` combo when using `"web"` or `"node"` as compilation target (inside `webpack.config.js`). When using `"node"` target, live reloading doesn't work and there are no obvious warnings inside the terminal or browser console.
+This is a minimum project used to test `webpack-dev-server` live reloading when using `"web"` or `"node"` as compilation target (inside `webpack.config.js`). When using `"node"` target, live reloading doesn't work and there are no obvious warnings inside the terminal or browser console.
 
 To run the server with `"web"` target:
 ```
@@ -13,8 +13,6 @@ To run with `"node"` target:
 ```
 $ npm run start:node
 ```
-
-`html-webpack-plugin` helps to load bundles and extra js from `webpack-dev-server` and seems not to be the cause of the issue
 
 ## What this highlights?
 
